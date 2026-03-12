@@ -1,0 +1,20 @@
+# Python bytecode (compiled files)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment (the .venv folder in your sidebar)
+.venv/
+venv/
+ENV/
+
+# VS Code settings
+.vscode/
+
+# Large Model Files (Optional)
+# If you want others to download the model themselves instead of uploading 95MB
+# src/data/shape_predictor_68_face_landmarks.dat
+
+# OS-specific files
+.DS_Store
+Thumbs.db
