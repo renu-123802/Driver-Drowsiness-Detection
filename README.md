@@ -31,17 +31,3 @@ If the EAR stays below a threshold (e.g., 0.25) for more than 20 consecutive fra
 ### 1. Clone the Repository
 git clone https://github.com/renu-123802/Driver-Drowsiness-Detection.git
 cd Driver-Drowsiness-Detection
----
-
-### 3. Check your `alarm.py` (First Image)
-I noticed in your first screenshot that you are still using the **hardcoded absolute path** on line 11:
-`r'C:\Users\Renu\OneDrive\Desktop\project...'`
-
-Since you've moved everything into a clean GitHub structure, **this code will crash** for anyone else (or even for you if you rename the folder). 
-
-**Update line 11 to use a relative path:**
-```python
-import os
-# ... inside your function
-base_path = os.path.dirname(__file__)
-alarm_file = os.path.join(base_path, "..", "data", "alarm.wav")
