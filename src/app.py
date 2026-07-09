@@ -71,5 +71,5 @@ webrtc_streamer(
     key="drowsiness-detection",
     video_processor_factory=DrowsinessProcessor,
     rtc_configuration=RTC_CONFIGURATION,
-    media_stream_constraints={"video": True, "audio": False},
+    media_stream_constraints={"video": True, "audio": False}, 
 )
