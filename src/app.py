@@ -1,4 +1,4 @@
-import streamlit as st
+﻿import streamlit as st
 from streamlit_webrtc import webrtc_streamer, VideoProcessorBase
 import cv2
 import av
@@ -11,7 +11,7 @@ from detection.face_detection import detect_faces, get_landmarks
 from detection.blink_detection import is_blinking
 from detection.yawning_detection import is_yawning
 
-st.title("Driver Drowsiness Detection — Live Demo")
+st.title("Driver Drowsiness Detection â€” Live Demo")
 st.write("Allow camera access below. Detects closed eyes and yawning in real time.")
 st.info("Note: this web demo shows visual alerts only. The full local version (see GitHub) also plays an audio alarm.")
 
