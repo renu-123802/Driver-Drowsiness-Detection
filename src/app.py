@@ -63,4 +63,13 @@ class DrowsinessProcessor(VideoProcessorBase):
 
         return av.VideoFrame.from_ndarray(img, format="bgr24")
 
-webrtc_streamer(key="drowsiness-detection", video_processor_factory=DrowsinessProcessor)
+RTC_CONFIGURATION = {
+    "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]
+}
+
+webrtc_streamer(
+    key="drowsiness-detection",
+    video_processor_factory=DrowsinessProcessor,
+    rtc_configuration=RTC_CONFIGURATION,
+    media_stream_constraints={"video": True, "audio": False},
+)
